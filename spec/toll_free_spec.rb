@@ -5,6 +5,9 @@ describe "#permutations" do
   it 'returns the permutations of the arrays given to it' do
     expect(permutations([[1,2], [3,4]])).to match_array [[1,3], [1,4], [2,3], [2,4]]
   end
+  it 'returns just one set if there are no choices' do
+    expect(permutations([["a", "b", "c"]])).to match_array [["a"], ["b"], ["c"]]
+  end
 end
 
 describe "splits" do

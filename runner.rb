@@ -27,7 +27,6 @@ splits(input).each do |split|
     poss = number.split('').map do |n|
       numbers[n]
     end
-
     if poss.any? {|p| p.nil? }
       [number]
     else
@@ -39,6 +38,6 @@ splits(input).each do |split|
   end
   # p groups
   permutations(groups).each do |foo|
-    p foo.join(' ').upcase
+    puts foo.join(' ').upcase
   end
 end
